@@ -1,0 +1,6 @@
+@import '../../App.scss';
+
+.button {
+    @include button;
+    cursor: pointer;
+}

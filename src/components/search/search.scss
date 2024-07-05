@@ -1,0 +1,20 @@
+@import '../../App.scss';
+
+.search-sw {
+    display: flex;
+    margin: 0 0 $textPadding 0;
+    width: 100%;
+    justify-content: center;
+    background: $backgroundColor;
+    padding: 30px;
+
+    .search-sw__form {
+        .search-input {
+            padding: $textPadding;
+            width: 400px;
+            border-radius: $radius;
+            border: 0.5px solid grey;
+            margin-right: $textPadding;
+        }
+    }
+}

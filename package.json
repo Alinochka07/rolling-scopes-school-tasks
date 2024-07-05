@@ -15,7 +15,8 @@
     "eslint-plugin-react-compiler": "^0.0.0-experimental-0998c1e-20240625",
     "prettier": "^3.3.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "sass": "^1.77.6"
   },
   "devDependencies": {
     "@eslint/compat": "^1.1.0",
