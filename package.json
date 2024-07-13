@@ -9,7 +9,7 @@
     "lint": "eslint src",
     "preview": "vite preview",
     "precommit": "npm run lint",
-    "format:fix": "npx prettier --write"
+    "format:fix": "npx prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
     "eslint-plugin-react-compiler": "^0.0.0-experimental-0998c1e-20240625",
@@ -23,13 +23,13 @@
     "@eslint/js": "^9.6.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.1",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "eslint": "^9.6.0",
+    "eslint": "^9.7.0",
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.7",
+    "eslint-plugin-react-refresh": "^0.4.8",
     "globals": "^15.8.0",
     "husky": "^9.0.11",
     "typescript": "^5.2.2",

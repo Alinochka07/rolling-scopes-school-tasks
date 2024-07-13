@@ -1,6 +1,6 @@
-@import '../../App.scss';
+@import "../../App.scss";
 
 .button {
-    @include button;
-    cursor: pointer;
+  @include button;
+  cursor: pointer;
 }

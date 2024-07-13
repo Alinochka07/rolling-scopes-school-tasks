@@ -24,17 +24,15 @@ $fontColor: #4d4a4a;
 }
 
 * {
-    font-size: $textFont;
+  font-size: $textFont;
 
-    .app-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin: 0 $textPadding;
-        width: 100vw;
-    }
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0 $textPadding;
+    width: 100vw;
+  }
 }
-    
-
