@@ -3,11 +3,12 @@ import "./button.scss";
 
 export interface ButtonProps extends PropsWithChildren {
   onClick?: () => void;
+  buttonType: "submit" | "reset" | "button";
 }
 
-const Button = ({ onClick, children }: ButtonProps): ReactElement => {
+const Button = ({ onClick, buttonType, children }: ButtonProps): ReactElement => {
   return (
-    <button type="button" className="button" onClick={onClick}>
+    <button type={buttonType} className="button" onClick={onClick}>
       {children}
     </button>
   );

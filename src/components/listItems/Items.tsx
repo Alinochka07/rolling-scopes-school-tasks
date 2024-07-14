@@ -1,6 +1,7 @@
 import React from "react";
 import "./items.scss";
 
+
 interface PeopleItems {
   name: string;
   height: number;
@@ -10,80 +11,24 @@ interface PeopleItems {
 
 interface PlanetsItems {
   name: string;
-  population: string;
+  population: number;
   climate: string;
 }
 
 interface ItemsProps {
   people: PeopleItems[];
   planets: PlanetsItems[];
+  errorMessage: string;
   handleClick: () => void;
 }
 
-interface ItemsState {
-  people: PeopleItems[];
-  planets: PlanetsItems[];
-  errorMessage: string;
-}
-
-class Items extends React.Component<ItemsProps, ItemsState> {
+class Items extends React.Component<ItemsProps> {
   constructor(props: ItemsProps) {
     super(props);
-
-    this.state = {
-      people: [],
-      planets: [],
-      errorMessage: "",
-    };
   }
-
-  componentDidMount(): void {
-    this.fetchPeople();
-    this.fetchPlanets();
-  }
-
-  fetchPeople = () => {
-    fetch("https://swapi.dev/api/people/")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error occurred during fetching items.");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        this.setState({
-          people: data.results,
-        });
-      })
-      .catch((error) => {
-        this.setState({
-          errorMessage: error.message,
-        });
-      });
-  };
-
-  fetchPlanets = () => {
-    fetch("https://swapi.dev/api/planets/")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error occurred during fetching items.");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        this.setState({
-          planets: data.results,
-        });
-      })
-      .catch((error) => {
-        this.setState({
-          errorMessage: error.message,
-        });
-      });
-  };
 
   render(): React.ReactNode {
-    const { people, planets, errorMessage } = this.state;
+    const { people, planets, errorMessage } = this.props;
 
     return (
       <>
