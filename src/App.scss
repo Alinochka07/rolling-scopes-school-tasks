@@ -1,0 +1,38 @@
+$darkRed: rgb(139, 36, 36);
+$radius: 5px;
+$borderColor: rgb(13, 41, 13);
+$textPadding: 10px;
+$textFont: 14px;
+$backgroundColor: #f9f9f9;
+$tilesMargin: 15px;
+$fontColor: #4d4a4a;
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin border-color($borderColor) {
+  border: 1px solid $borderColor;
+}
+
+@mixin button {
+  background-color: $borderColor;
+  padding: $textPadding;
+  color: white;
+  @include border-radius($radius);
+  @include border-color($borderColor);
+}
+
+* {
+  font-size: $textFont;
+
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0 $textPadding;
+    width: 100vw;
+  }
+}

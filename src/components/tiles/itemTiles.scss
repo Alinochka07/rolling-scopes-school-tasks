@@ -1,0 +1,17 @@
+@import "../../App.scss";
+
+.items {
+  display: flex;
+  @include border-color($borderColor);
+  @include border-radius($radius);
+  padding: $textPadding;
+  margin: 15px 0;
+  
+  .items-info {
+    .items-info__details {
+      .items-info__detail {
+        
+      }
+    }
+  }
+}
